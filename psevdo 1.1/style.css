@@ -1,0 +1,91 @@
+body {
+    background-color: darkorange;
+}
+
+.ex {
+    width: 70%;
+    background-color: antiquewhite;
+    margin: 10px auto;
+    text-align: justify;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ex1 p::first-letter {
+    color: red;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.ex2 p::first-line {
+    color: fuchsia;
+    font-size: 50px;
+}
+
+.ex3 p::selection {
+    color: white;
+    background-color: green;
+}
+
+.ex4 #you::placeholder {
+    color: green;
+}
+
+.ex4 #tor::placeholder {
+    color: aliceblue;
+    background-color: forestgreen;
+}
+
+.ex5 #one:focus {
+    color: green;
+}
+
+.ex5 #two:focus {
+    color: darkorange;
+    border: 1px solid darkorange;
+    outline: none;
+}
+
+.ex5 #three:focus {
+    color: black;
+    border: 1px solid black;
+    width: 300px;
+}
+
+.ex6 p::before {
+    content: "Start: ";
+    color: red;
+}
+
+.ex6 p::after {
+    content: " Finish:";
+    color: green;
+}
+
+.ex7 {
+    counter-reset: num;
+}
+
+.ex7 p::before {
+    counter-increment: num;
+    content: "Paragraph #"counter(num) ".";
+    color: green;
+}
+
+.ex8 {
+    counter-reset: num 7;
+}
+
+.ex8 p::before {
+    counter-increment: num;
+    content: "Paragraph #"counter(num)".";
+    color: green;
+}
+
+.ex9 {
+    display: flex;
+}
+
+.ex9 li::selection {
+    color: bisque;
+}
